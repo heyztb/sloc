@@ -11,8 +11,6 @@ export const GET: RequestHandler = async ({ cookies }) => {
     redirectUrl: getSiteUrl('authorize')
   })
 
-  console.log(url)
-
   cookies.set('state', state, {
     path: '/'
   })

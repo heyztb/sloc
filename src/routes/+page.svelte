@@ -3,10 +3,15 @@
 	import { page } from '$app/stores';
 </script>
 
+<svelte:head>
+	<title>SLOC</title>
+	<meta name="description" content="Web utility for GitHub users to count the lines of code in their public repositories" />
+</svelte:head>
+
 <div class="flex flex-col justify-center items-center w-full h-screen">
 	<div class="p-6">
 		<Heading tag="h1">SLOC</Heading>
-		<P>Web util for Github users to count the lines of code in your repos</P>
+		<P>Web util for GitHub users to count the lines of code in your public repos</P>
 		{#if !$page.data.authed}
 			<Button color="light" href="/login">Login with GitHub</Button>
 		{:else}
